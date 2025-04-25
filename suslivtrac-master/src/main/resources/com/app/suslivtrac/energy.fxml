@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.suslivtrac.Energycontroller">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label fx:id="totalConsumptionLabel" text="Total Electricity Consumption: 0.0 kWh"/>
+    <TableView fx:id="energyTable">
+        <columns>
+            <TableColumn fx:id="dayColumn" text="Day" prefWidth="100"/>
+            <TableColumn fx:id="consumptionColumn" text="Consumption (kWh)" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

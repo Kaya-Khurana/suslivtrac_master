@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import java.lang.String?>
+<GridPane fx:id="rootPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.suslivtrac.CarbonFootprintController" alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 20;">
+    <Label text="Carbon Footprint Calculator" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <Label text="Activity Type:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <ComboBox fx:id="activityComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Car Travel" />
+                <String fx:value="Electricity Usage" />
+                <String fx:value="Meat Consumption" />
+                <String fx:value="Public Transport" />
+                <String fx:value="Other" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Amount (km, kWh, kg):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="amountField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Button text="Calculate and Save" fx:id="calculateButton" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2" onAction="#handleCalculate" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+
+    <TableView fx:id="carbonTable" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+        <columns>
+            <TableColumn text="Date" fx:id="dateColumn" />
+            <TableColumn text="Activity" fx:id="activityColumn" />
+            <TableColumn text="Emissions (kg CO2)" fx:id="emissionColumn" />
+        </columns>
+    </TableView>
+</GridPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.app.suslivtrac.CarController">
+    <children>
+        <ScrollPane fitToWidth="true" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <content>
+                <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 15;">
+                    <!-- Title -->
+                    <Label text="Car Carbon Footprint Calculator" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: blue;" />
+                    <Label text="You can enter details for up to 2 cars" />
+
+                    <!-- Mileage Input -->
+                    <HBox spacing="10">
+                        <Label text="Mileage:" />
+                        <TextField fx:id="mileageField" prefWidth="80" />
+                        <ComboBox fx:id="unitComboBox" />
+                    </HBox>
+
+                    <!-- Vehicle Selection -->
+                    <Label text="Choose vehicle:" />
+                    <ComboBox fx:id="vehicleTypeComboBox" />
+                    <ComboBox fx:id="vehicleYearComboBox" promptText="- select year -" />
+                    <ComboBox fx:id="vehicleModelComboBox" promptText="- select model -" />
+                    <ComboBox fx:id="fuelTypeComboBox" />
+
+                    <!-- Efficiency Input -->
+                    <HBox spacing="10">
+                        <Label text="Or enter efficiency:" />
+                        <TextField fx:id="efficiencyField" prefWidth="80" />
+                        <ComboBox fx:id="efficiencyUnitComboBox" />
+                    </HBox>
+
+                    <!-- Calculate Button -->
+                    <Button fx:id="calculateButton" text="Calculate and Add To Footprint"
+                            onAction="#calculateFootprint"
+                            style="-fx-background-color: green; -fx-text-fill: white;" />
+
+                    <!-- Result Display -->
+                    <Label fx:id="resultLabel"
+                           text="Total Car Footprint = 0.00 tonnes of CO2e"
+                           style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+                    <Button fx:id="offsetButton" text="Offset Now" disable="true" />
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

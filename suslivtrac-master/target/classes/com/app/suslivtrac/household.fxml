@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.suslivtrac.HouseholdController">
+    <children>
+        <VBox spacing="15" alignment="CENTER" layoutX="50" layoutY="30" prefWidth="500">
+
+            <!-- Title -->
+            <Label text="Household Carbon Footprint Calculator"
+                  style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: blue;" />
+
+            <!-- Electricity Consumption -->
+            <HBox spacing="10">
+                <Label text="Electricity Consumption:" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="txtElectricity" prefWidth="100" />
+                <Label text="kWh" />
+            </HBox>
+
+            <!-- LPG Consumption -->
+            <HBox spacing="10">
+                <Label text="LPG Consumption:" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="txtLPG" prefWidth="100" />
+                <Label text="litres" />
+            </HBox>
+
+            <!-- Calculate Button -->
+            <Button fx:id="btnCalculate" text="Calculate" onAction="#calculateFootprint"
+                    style="-fx-background-color: green; -fx-text-fill: white;" />
+
+            <!-- Result Label -->
+            <Label fx:id="lblResult" text="Total Household Footprint = 0.00 tonnes of CO2e"
+                   style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        </VBox>
+    </children>
+</AnchorPane>

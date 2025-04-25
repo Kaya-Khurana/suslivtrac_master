@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.app.suslivtrac.FlightController">
+    <children>
+        <VBox spacing="10" alignment="CENTER" prefWidth="600" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+            <Label text="Flight Carbon Footprint Calculator" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: blue;" />
+
+            <!-- Trip Type -->
+            <HBox spacing="10">
+                <Label text="Trip Type:"/>
+                <RadioButton text="Return Trip" fx:id="returnTripRadio"/>
+                <RadioButton text="One-way Flight" fx:id="oneWayTripRadio"/>
+            </HBox>
+
+            <!-- From, To, and Via Dropdowns -->
+            <GridPane hgap="10" vgap="10">
+                <Label text="From:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="fromComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="To:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="toComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Via (Optional):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="viaComboBox" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <!-- Class Selection -->
+            <HBox spacing="10">
+                <Label text="Class:"/>
+                <ComboBox fx:id="classComboBox"/>
+            </HBox>
+
+            <!-- Number of Trips -->
+            <HBox spacing="10">
+                <Label text="Trips:"/>
+                <TextField fx:id="tripsField" text="1" prefWidth="50"/>
+            </HBox>
+
+            <!-- Radiative Forcing Checkbox -->
+            <CheckBox fx:id="radiativeForcingCheckbox" text="Tick to include radiative forcing"/>
+
+            <!-- Calculate Button -->
+            <Button fx:id="calculateButton" text="Calculate and Add To Footprint" style="-fx-background-color: green; -fx-text-fill: white;"/>
+
+            <!-- Result Display -->
+            <Label fx:id="resultText" text="Total Flights Footprint = 0.00 tonnes of CO2e" maxWidth="500" wrapText="true"
+                   VBox.vgrow="ALWAYS"
+                   style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        </VBox>
+    </children>
+</AnchorPane>

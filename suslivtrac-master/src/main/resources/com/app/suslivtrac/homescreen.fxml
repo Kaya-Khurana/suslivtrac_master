@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.suslivtrac.homescreen">
+   <children>
+      <Label fx:id="welcomeLabel" layoutX="70.0" layoutY="85.0" prefHeight="125.0" prefWidth="500.0" text="Hellooo">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="400.0" layoutY="299.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="149.0" text="SignOut" />
+   </children>
+</AnchorPane>

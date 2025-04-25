@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.app.suslivtrac.DashboardController">
+    <children>
+        <TabPane fx:id="tabPane" layoutX="10" layoutY="10" prefWidth="580" prefHeight="580">
+            <tabs>
+                <Tab fx:id="householdTab" text="Household">
+                    <AnchorPane>
+                        <children>
+                            <Label text="Household Carbon Footprint Calculator" layoutX="20" layoutY="20" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                <Tab fx:id="carTab" text="Car">
+                    <AnchorPane>
+                        <children>
+                            <Label text="Car Carbon Footprint Calculator" layoutX="20" layoutY="20" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                <Tab fx:id="flightTab" text="Flight">
+                    <AnchorPane>
+                        <children>
+                            <Label text="Flight Carbon Footprint Calculator" layoutX="20" layoutY="20" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                <Tab fx:id="energyTab" text="Energy">
+                    <AnchorPane>
+                        <children>
+                            <Label text="Your Total Energy Consumption" layoutX="20" layoutY="20" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                <Tab fx:id="resultTab" text="Results">
+                    <AnchorPane>
+                        <children>
+                            <Label text="Your Total Carbon Footprint" layoutX="20" layoutY="20" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
+
